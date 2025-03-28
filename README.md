@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Frontend Assignment - Page Selection Modal
 
 A React component library featuring a page selection modal built with React 19, Vite, and Tailwind CSS. This project demonstrates modern UI component development with a focus on reusability and clean design.
@@ -94,3 +95,6 @@ npm run lint
 - Framer Motion
 - Lucide React (for icons)
 - Class Variance Authority
+=======
+
+>>>>>>> 6aa371f63f4e939819539e97dc25bed4362f6567
