@@ -21,10 +21,11 @@ export const Text = ({
     body: 'text-base',
     small: 'text-sm',
     tiny: 'text-xs',
+    button: 'text-sm font-normal leading-[130%] tracking-[0px] font-Montserrat',
   };
 
   const colorStyles = {
-    default: 'text-gray-900 dark:text-gray-100',
+    default: 'text-gray-900 dark:text-gray-100 ',
     primary: 'text-blue-600 dark:text-blue-400',
     secondary: 'text-gray-600 dark:text-gray-300',
     success: 'text-green-600 dark:text-green-400',
@@ -73,7 +74,7 @@ export const Text = ({
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'small', 'tiny']),
+  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'body', 'small', 'tiny', 'button']),
   color: PropTypes.oneOf(['default', 'primary', 'secondary', 'success', 'warning', 'error', 'muted']),
   align: PropTypes.oneOf(['left', 'center', 'right']),
   weight: PropTypes.oneOf(['light', 'normal', 'medium', 'semibold', 'bold']),

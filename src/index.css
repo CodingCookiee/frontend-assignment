@@ -1,6 +1,4 @@
 /* Define layer order explicitly */
-
-
 @custom-variant dark (&:is(.dark *));
 @layer tw, tw.theme, tw.base, tw.components, tw.utilities, custom;
 
@@ -10,7 +8,6 @@
 @import "./styles/custom-preflight.css" layer(tw.base);
 @import "tw-animate-css";
 
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -19,10 +16,10 @@
   --card-foreground: oklch(0.13 0.028 261.692);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.13 0.028 261.692);
-  --primary: oklch(0.21 0.034 264.665);
-  --primary-foreground: oklch(0.985 0.002 247.839);
-  --secondary: oklch(0.967 0.003 264.542);
-  --secondary-foreground: oklch(0.21 0.034 264.665);
+  --primary: #FFCE22;
+  --primary-foreground: oklch(0.13 0.028 261.692);
+  --secondary: #FFD84D;
+  --secondary-foreground: oklch(0.13 0.028 261.692);
   --muted: oklch(0.967 0.003 264.542);
   --muted-foreground: oklch(0.551 0.027 264.364);
   --accent: oklch(0.967 0.003 264.542);
@@ -53,10 +50,10 @@
   --card-foreground: oklch(0.985 0.002 247.839);
   --popover: oklch(0.21 0.034 264.665);
   --popover-foreground: oklch(0.985 0.002 247.839);
-  --primary: oklch(0.928 0.006 264.531);
-  --primary-foreground: oklch(0.21 0.034 264.665);
-  --secondary: oklch(0.278 0.033 256.848);
-  --secondary-foreground: oklch(0.985 0.002 247.839);
+  --primary: #FFCE22;
+  --primary-foreground: oklch(0.13 0.028 261.692);
+  --secondary: #FFD84D;
+  --secondary-foreground: oklch(0.13 0.028 261.692);
   --muted: oklch(0.278 0.033 256.848);
   --muted-foreground: oklch(0.707 0.022 261.325);
   --accent: oklch(0.278 0.033 256.848);
@@ -124,9 +121,36 @@
   }
   body {
     @apply bg-background text-foreground;
-
   }
 }
+
+/* Button utilities */
+@utility btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+@utility btn-primary-hover {
+  opacity: 0.9;
+}
+
+@utility btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+@utility btn-secondary-hover {
+  opacity: 0.9;
+}
+
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
