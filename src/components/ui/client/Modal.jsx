@@ -42,7 +42,7 @@ export const Modal = ({ className, ...props }) => {
     <div className="">
       <div 
         className={cn(
-          "w-full h-full rounded-md border  border-[#EEEEEE] bg-[#ffffff] shadow-[0px_8px_15px_0px_#1414141F,0px_0px_4px_0px_#1414141A] py-6",
+          "w-full h-full rounded-md border  border-[#EEEEEE] bg-white shadow-[0px_8px_15px_0px_#1414141F,0px_0px_4px_0px_#1414141A] py-6",
           className
         )}
         {...props}

@@ -13,14 +13,14 @@ function Checkbox({
 
   return (
     <div 
-      className="relative w-[23px] h-[23px]"
+      className="relative w-[25px] h-[25px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
     <CheckboxPrimitive.Root
         data-slot="checkbox"
         className={cn(
-          "cursor-pointer peer w-[23px] h-[23px] shrink-0 rounded-[6px] border border-[#878787] shadow-xs transition-all duration-200 ease-in-out outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+          "cursor-pointer peer w-[25px] h-[25px] shrink-0 rounded-sm border border-[#878787] shadow-xs transition-all duration-200 ease-in-out outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
           isHovered && !props.disabled ? "shadow-[0_0_5px_2px_rgba(80,135,248,0.4)]" : "",
           "data-[state=checked]:border-[#FFFFFF]",
           variant === "primary" ? "data-[state=checked]:bg-[#2469F6]" : "data-[state=checked]:bg-[#5087F8]",
@@ -30,7 +30,7 @@ function Checkbox({
         <CheckboxPrimitive.Indicator
           data-slot="checkbox-indicator"
           className="flex items-center justify-center text-current transition-all duration-200 ease-in-out">
-          <CheckIcon className="size-4 text-white" />
+          <CheckIcon className="size-4 self-center text-white" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
       
