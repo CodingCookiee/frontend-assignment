@@ -1,14 +1,5 @@
 # Frontend Assignment - Page Selection Modal
 
-A React component library featuring a page selection modal built with React 19, Vite, and Tailwind CSS. This project demonstrates modern UI component development with a focus on reusability and clean design.
-
-## Features
-
-- Interactive page selection modal
-- Customizable checkbox components
-- Responsive design
-- Clean, modern UI
-
 ## Tech Stack
 
 - React 19 with Vite
@@ -45,7 +36,7 @@ cd frontend-assignment
 
 2. Install dependencies:
 ```bash
-npm install
+npm install --force
 ```
 
 3. Start the development server:
