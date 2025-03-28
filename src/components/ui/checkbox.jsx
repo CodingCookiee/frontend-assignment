@@ -6,22 +6,41 @@ import { cn } from "@/lib/utils"
 
 function Checkbox({
   className,
+  variant = "primary",
   ...props
 }) {
+  const [isHovered, setIsHovered] = React.useState(false);
+
   return (
+    <div 
+      className="relative w-[25px] h-[25px]"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
     <CheckboxPrimitive.Root
-      data-slot="checkbox"
-      className={cn(
-        "peer border-input dark:bg-input/30 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:data-[state=checked]:bg-primary data-[state=checked]:border-primary focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive size-4 shrink-0 rounded-[4px] border shadow-xs transition-shadow outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
-        className
+        data-slot="checkbox"
+        className={cn(
+          "cursor-pointer peer w-[25px] h-[25px] shrink-0 rounded-[6px] border border-[#878787] shadow-xs transition-all duration-200 ease-in-out outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+          isHovered && !props.disabled ? "shadow-[0_0_5px_2px_rgba(80,135,248,0.4)]" : "",
+          "data-[state=checked]:border-[#FFFFFF]",
+          variant === "primary" ? "data-[state=checked]:bg-[#2469F6]" : "data-[state=checked]:bg-[#5087F8]",
+          className
+        )}
+        {...props}>
+        <CheckboxPrimitive.Indicator
+          data-slot="checkbox-indicator"
+          className="flex items-center justify-center text-current transition-all duration-200 ease-in-out">
+          <CheckIcon className="size-4 text-white" />
+        </CheckboxPrimitive.Indicator>
+      </CheckboxPrimitive.Root>
+      
+      {/* Hover indicator that shows the tick */}
+      {isHovered && !props.checked && !props.disabled && (
+        <div className="absolute inset-0  flex items-center justify-center pointer-events-none">
+          <CheckIcon className="size-4 text-[#878787]" />
+        </div>
       )}
-      {...props}>
-      <CheckboxPrimitive.Indicator
-        data-slot="checkbox-indicator"
-        className="flex items-center justify-center text-current transition-none">
-        <CheckIcon className="size-3.5" />
-      </CheckboxPrimitive.Indicator>
-    </CheckboxPrimitive.Root>
+    </div>
   );
 }
 
