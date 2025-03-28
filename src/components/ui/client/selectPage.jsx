@@ -12,7 +12,7 @@ const SelectPage = ({
   return (
     <div
       className={cn(
-        "bg-[#FFFFFF] flex items-center justify-between w-[370px] h-[42px] pl-[22px] pr-[15px] py-[8px]",
+        "bg-transparent flex items-center justify-between w-[370px] h-[42px] pl-[22px] pr-[15px] py-[8px]",
         className
       )}
       {...props}
