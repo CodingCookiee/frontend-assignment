@@ -13,14 +13,14 @@ function Checkbox({
 
   return (
     <div 
-      className="relative w-[25px] h-[25px]"
+      className="relative w-[23px] h-[23px]"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
     <CheckboxPrimitive.Root
         data-slot="checkbox"
         className={cn(
-          "cursor-pointer peer w-[25px] h-[25px] shrink-0 rounded-[6px] border border-[#878787] shadow-xs transition-all duration-200 ease-in-out outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
+          "cursor-pointer peer w-[23px] h-[23px] shrink-0 rounded-[6px] border border-[#878787] shadow-xs transition-all duration-200 ease-in-out outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50",
           isHovered && !props.disabled ? "shadow-[0_0_5px_2px_rgba(80,135,248,0.4)]" : "",
           "data-[state=checked]:border-[#FFFFFF]",
           variant === "primary" ? "data-[state=checked]:bg-[#2469F6]" : "data-[state=checked]:bg-[#5087F8]",

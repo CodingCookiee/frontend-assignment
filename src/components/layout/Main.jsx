@@ -1,9 +1,15 @@
 import React from 'react';
+import { Button, Modal } from '../ui';
 
 const Main = () => {
+   
+    
     return (
-        <div>
-            Main
+        <div className="flex items-center justify-center min-h-screen">
+            {/* Modal Component */}
+            <Modal 
+                
+            />
         </div>
     );
 }

@@ -220,7 +220,7 @@
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 8px;
   height: 3px;
 }
 
@@ -230,11 +230,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2c2c2c;
+  background-color: #FFCE22;
   border-radius: 10px;
-  border: 2px solid #2c2c2c;
+  border: 2px solid #FFCE22;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #2c2c2c;
+  background-color: #FFD84D;
 }
