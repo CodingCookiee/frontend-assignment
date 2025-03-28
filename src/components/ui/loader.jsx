@@ -10,10 +10,10 @@ export const Loader = ({ height = "h-screen", width = "w-16" }) => {
         className={`flex items-center justify-center ${height}`}
       >
         <motion.div
-          className={`${width} aspect-square  border-t-3 border-transparent  rounded-full`}
+          className={`${width} aspect-square  border-t-5 border-transparent  rounded-full`}
           style={{
             borderColor: "",
-            borderTopColor: "#4B0082",
+            borderTopColor: "#FFCE22",
           }}
           animate={{
             rotate: 360,
