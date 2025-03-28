@@ -11,6 +11,8 @@ export const Modal = ({ className, ...props }) => {
     { id: 2, label: "Page 2", checked: false },
     { id: 3, label: "Page 3", checked: false },
     { id: 4, label: "Page 4", checked: false },
+    { id: 5, label: "Page 5", checked: false },
+    { id: 6, label: "Page 6", checked: false },
   ]);
   
   const [allPagesChecked, setAllPagesChecked] = useState(false);
@@ -57,7 +59,7 @@ export const Modal = ({ className, ...props }) => {
         <Divider />
         
         {/* Individual Page Checkboxes */}
-        <div className="max-h-[180px] overflow-y-auto">
+        <div className="max-h-[180px] overflow-y-auto overflow-x-hidden scrollbar-hide">
           {pages.map(page => (
             <SelectPage 
               key={page.id}
@@ -83,5 +85,3 @@ export const Modal = ({ className, ...props }) => {
     </div>
   );
 };
-
-

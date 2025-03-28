@@ -30,14 +30,14 @@ function Checkbox({
         <CheckboxPrimitive.Indicator
           data-slot="checkbox-indicator"
           className="flex items-center justify-center text-current transition-all duration-200 ease-in-out">
-          <CheckIcon className="size-4 self-center text-white" />
+          <CheckIcon className="size-6 self-center text-white" />
         </CheckboxPrimitive.Indicator>
       </CheckboxPrimitive.Root>
       
       {/* Hover indicator that shows the tick */}
       {isHovered && !props.checked && !props.disabled && (
         <div className="absolute inset-0  flex items-center justify-center pointer-events-none">
-          <CheckIcon className="size-4 text-[#878787]" />
+          <CheckIcon className="size-6 text-[#878787]" />
         </div>
       )}
     </div>
